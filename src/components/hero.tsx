@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowDown, ArrowUpRight, Mail } from "lucide-react";
 import type { Dictionary, Locale } from "@/content/types";
 import { siteConfig } from "@/lib/site";
@@ -35,28 +36,28 @@ function MonogramPortrait({ dict }: { dict: Dictionary }) {
   return (
     <div className="relative">
       <div className="relative overflow-hidden rounded-[2rem] border border-paper/15 bg-ink-850 noise-overlay">
-        <div className="grid-lines absolute inset-0 opacity-60" />
-        <div className="absolute -right-16 -top-16 h-52 w-52 rounded-full bg-cyan/20 blur-3xl" />
-        <div className="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-magenta/20 blur-3xl" />
+        <Image
+          src="/profile.jpeg"
+          alt={dict.hero.photoAlt}
+          fill
+          priority
+          sizes="(min-width: 1024px) 30rem, 100vw"
+          className="object-cover"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-ink-950/40" />
+        <div className="grid-lines pointer-events-none absolute inset-0 opacity-15" />
+        <div className="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-cyan/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-magenta/20 blur-3xl" />
 
         <div className="relative flex aspect-[4/5] flex-col justify-between p-6 sm:p-8">
           <div className="flex items-start justify-between">
-            <span className="label-mono text-paper-mute">SS.</span>
-            <span className="label-mono text-paper-mute">
-              Fusagasugá · CO
-            </span>
+            <span className="label-mono text-paper/90">SS.</span>
+            <span className="label-mono text-paper/90">Fusagasugá · CO</span>
           </div>
 
           <div className="flex items-end justify-between">
-            <span className="font-display text-[5.5rem] font-bold leading-[0.8] tracking-[-0.08em] sm:text-[7rem]">
-              <span className="text-lime">S</span>
-              <span className="text-coral">S</span>
-              <span className="text-cyan">.</span>
-            </span>
-            <span className="animate-drift mb-3 inline-block h-14 w-14 rounded-full border border-dashed border-paper/30" />
+            <span className="animate-drift mb-3 inline-block h-14 w-14 rounded-full border border-dashed border-paper/40" />
           </div>
-
-          <p className="text-xs text-paper-mute">{dict.hero.photoFallbackNote}</p>
         </div>
       </div>
 

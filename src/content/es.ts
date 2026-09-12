@@ -43,7 +43,6 @@ export const es: Dictionary = {
     cvLabel: "Descargar CV",
     cvHint: "Versión imprimible lista para guardar como PDF.",
     photoAlt: "Retrato de Samuel David Segura Vargas",
-    photoFallbackNote: "Retrato pendiente de sesión fotográfica",
     techLabel: "Tecnologías con las que trabajo",
     scrollHint: "Desliza para explorar",
   },

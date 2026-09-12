@@ -74,7 +74,6 @@ export interface Dictionary {
     cvLabel: string;
     cvHint: string;
     photoAlt: string;
-    photoFallbackNote: string;
     techLabel: string;
     scrollHint: string;
   };
