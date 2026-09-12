@@ -90,6 +90,7 @@ export interface Dictionary {
     role: string;
     company: string;
     companyNote: string;
+    logoAlt: string;
     period: string;
     location: string;
     summary: string;

@@ -85,6 +85,7 @@ export const es: Dictionary = {
     role: "Full Stack Developer",
     company: "AFAIS",
     companyNote: "Soluciones actuariales",
+    logoAlt: "Logotipo de AFAIS",
     period: "Junio 2024 — Julio 2026",
     location: "Colombia · Remoto",
     summary:

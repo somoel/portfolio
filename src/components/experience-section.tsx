@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Building2, MapPin } from "lucide-react";
 import type { Dictionary } from "@/content/types";
 import { Reveal, StaggerGroup, StaggerItem } from "./reveal";
@@ -20,9 +21,14 @@ export function ExperienceSection({ dict }: { dict: Dictionary }) {
           <Reveal>
             <div className="card-edge sticky top-28 rounded-3xl p-6 sm:p-7">
               <div className="flex items-center gap-4">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-coral font-display text-xl font-bold text-ink-950">
-                  AF
-                </span>
+                <Image
+                  src="/afais.webp"
+                  alt={experience.logoAlt}
+                  width={909}
+                  height={910}
+                  sizes="56px"
+                  className="h-14 w-14 shrink-0 object-contain"
+                />
                 <div>
                   <p className="font-display text-xl tracking-tight">
                     {experience.company}
