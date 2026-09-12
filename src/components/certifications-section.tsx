@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ArtTone, Dictionary } from "@/content/types";
 import { toneHex } from "./project-art";
 import { SectionHeading } from "./section-heading";
@@ -55,7 +56,25 @@ export function CertificationsSection({ dict }: { dict: Dictionary }) {
             <StaggerItem key={cert.slug}>
               <article className="flex h-full flex-col rounded-3xl border border-paper/12 bg-ink-950 p-7 transition-colors hover:border-paper/30">
                 <div className="flex items-start justify-between gap-4">
-                  <Emblem initials={cert.initials} tone={cert.tone} />
+                  {cert.image ? (
+                    <a
+                      href={cert.credlyUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="shrink-0 transition-opacity hover:opacity-80"
+                    >
+                      <Image
+                        src={cert.image}
+                        alt={cert.name}
+                        width={256}
+                        height={256}
+                        sizes="80px"
+                        className="h-20 w-20 object-contain"
+                      />
+                    </a>
+                  ) : (
+                    <Emblem initials={cert.initials} tone={cert.tone} />
+                  )}
                   <span className="font-mono text-xs text-paper-mute">
                     {cert.year}
                   </span>

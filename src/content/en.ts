@@ -409,9 +409,7 @@ export const en: Dictionary = {
         score: "342 / 500",
         percentile: "Top 20% nationally",
       },
-    ],
-    footnote:
-      "Results reported by Samuel Segura and pending a link to the official score report.",
+    ]
   },
   certifications: {
     label: "Certifications",
@@ -428,6 +426,9 @@ export const en: Dictionary = {
           "Foundations of cloud computing, infrastructure, Linux and running services on Google Cloud.",
         initials: "GC",
         tone: "blue",
+        image: "/badges/google-cloud-foundations.webp",
+        credlyUrl:
+          "https://www.credly.com/badges/b21a88d7-175f-446c-818d-c21f6ac1d032/public_url",
       },
       {
         slug: "cisco-network-technician",
@@ -438,6 +439,9 @@ export const en: Dictionary = {
           "Networking fundamentals, IP addressing, device configuration and connectivity troubleshooting.",
         initials: "CI",
         tone: "cyan",
+        image: "/badges/cisco-network-technician.webp",
+        credlyUrl:
+          "https://www.credly.com/badges/7af684f7-4d8c-4355-83a3-2796ee9e107a/public_url",
       },
       {
         slug: "sena-programacion",

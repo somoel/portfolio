@@ -40,6 +40,8 @@ export interface CertificationItem {
   description: string;
   initials: string;
   tone: ArtTone;
+  image?: string;
+  credlyUrl?: string;
 }
 
 export interface ApproachItem {
@@ -134,7 +136,6 @@ export interface Dictionary {
     gpaLabel: string;
     gpa: string;
     scores: { label: string; score: string; percentile: string }[];
-    footnote: string;
   };
   certifications: {
     label: string;

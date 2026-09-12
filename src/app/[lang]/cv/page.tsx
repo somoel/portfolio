@@ -163,9 +163,6 @@ export default async function CvPage({ params }: PageProps<"/[lang]/cv">) {
             </li>
           ))}
         </ul>
-        <p className="mt-2 text-xs text-paper-mute">
-          {dict.education.footnote}
-        </p>
       </Section>
 
       <Section title={dict.cv.certificationsHeading}>

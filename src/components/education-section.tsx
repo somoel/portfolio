@@ -61,12 +61,6 @@ export function EducationSection({ dict }: { dict: Dictionary }) {
                 </div>
               </StaggerItem>
             ))}
-            <Reveal delay={0.2}>
-              <p className="flex items-start gap-2 text-xs leading-relaxed text-paper-mute">
-                <Info size={14} className="mt-0.5 shrink-0" />
-                {education.footnote}
-              </p>
-            </Reveal>
           </StaggerGroup>
         </div>
       </div>
