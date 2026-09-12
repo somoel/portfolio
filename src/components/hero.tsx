@@ -37,7 +37,7 @@ function MonogramPortrait({ dict }: { dict: Dictionary }) {
     <div className="relative">
       <div className="relative overflow-hidden rounded-[2rem] border border-paper/15 bg-ink-850 noise-overlay">
         <Image
-          src="/profile.jpeg"
+          src="/profile.webp"
           alt={dict.hero.photoAlt}
           fill
           priority
