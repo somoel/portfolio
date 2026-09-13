@@ -5,18 +5,18 @@ export const en: Dictionary = {
   localeName: "English",
   otherLocale: "es",
   meta: {
-    title: "Samuel Segura | Software Developer in Fusagasugá",
+    title: "Samuel Segura | Software Developer in Colombia",
     description:
-      "Portfolio of Samuel David Segura Vargas, full stack software developer based in Fusagasugá, Colombia. Python, Django, React, REST APIs and Google Cloud. Projects, certifications and contact.",
+      "Portfolio of Samuel David Segura Vargas, full stack software developer based in Colombia. Python, Django, React, REST APIs and Google Cloud. Projects, certifications and contact.",
     keywords: [
-      "software developer in Fusagasugá",
-      "full stack developer Fusagasugá",
+      "software developer in Colombia",
+      "full stack developer Colombia",
       "software development Cundinamarca",
       "Python Django developer",
       "React developer Colombia",
       "remote software developer Colombia",
     ],
-    ogAlt: "Samuel David Segura Vargas, software developer in Fusagasugá",
+    ogAlt: "Samuel David Segura Vargas, software developer in Colombia",
     jobTitle: "Software Developer",
   },
   nav: [
@@ -31,7 +31,7 @@ export const en: Dictionary = {
   languageSwitchLabel: "Change language",
   hero: {
     name: "Samuel David Segura Vargas",
-    role: "Software developer in Fusagasugá",
+    role: "Software developer in Colombia",
     tagline: "I build software that solves real problems.",
     description:
       "Systems engineering student with two years of professional experience. I design and ship full stack applications with Python, Django, React and Google Cloud, with a focus on performance, automated testing and visual detail.",
@@ -510,7 +510,7 @@ export const en: Dictionary = {
   cv: {
     title: "CV · Samuel David Segura Vargas",
     description:
-      "Resume of Samuel David Segura Vargas, software developer in Fusagasugá.",
+      "Resume of Samuel David Segura Vargas, software developer in Colombia.",
     printLabel: "Print or save as PDF",
     backLabel: "Back to portfolio",
     experienceHeading: "Professional experience",

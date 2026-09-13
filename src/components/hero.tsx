@@ -52,7 +52,7 @@ function MonogramPortrait({ dict }: { dict: Dictionary }) {
         <div className="relative flex aspect-[4/5] flex-col justify-between p-6 sm:p-8">
           <div className="flex items-start justify-between">
             <span className="label-mono text-paper/90">SS.</span>
-            <span className="label-mono text-paper/90">Fusagasugá · CO</span>
+            <span className="label-mono text-paper/90">Colombia</span>
           </div>
 
           <div className="flex items-end justify-between">

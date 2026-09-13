@@ -5,7 +5,7 @@ export const siteConfig = {
   name: "Samuel David Segura Vargas",
   shortName: "Samuel Segura",
   email: "jhamirsami05@gmail.com",
-  location: "Fusagasugá, Cundinamarca, Colombia",
+  location: "Colombia",
   linkedin: "https://linkedin.com/in/samuelseguravargas",
   github: "https://github.com/somoel",
 } as const;

@@ -5,19 +5,19 @@ export const es: Dictionary = {
   localeName: "Español",
   otherLocale: "en",
   meta: {
-    title: "Samuel Segura | Desarrollador de software en Fusagasugá",
+    title: "Samuel Segura | Desarrollador de software en Colombia",
     description:
-      "Portafolio de Samuel David Segura Vargas, desarrollador full stack en Fusagasugá. Experiencia en Python, Django, React, APIs REST y Google Cloud. Proyectos, certificaciones y contacto.",
+      "Portafolio de Samuel David Segura Vargas, desarrollador full stack en Colombia. Experiencia en Python, Django, React, APIs REST y Google Cloud. Proyectos, certificaciones y contacto.",
     keywords: [
-      "desarrollador de software en Fusagasugá",
-      "desarrollador full stack en Fusagasugá",
+      "desarrollador de software en Colombia",
+      "desarrollador full stack en Colombia",
       "desarrollo de software en Cundinamarca",
-      "ingeniero de sistemas en Fusagasugá",
+      "ingeniero de sistemas en Colombia",
       "programador Python Django",
       "desarrollador React Colombia",
     ],
     ogAlt:
-      "Samuel David Segura Vargas, desarrollador de software en Fusagasugá",
+      "Samuel David Segura Vargas, desarrollador de software en Colombia",
     jobTitle: "Desarrollador de software",
   },
   nav: [
@@ -32,7 +32,7 @@ export const es: Dictionary = {
   languageSwitchLabel: "Cambiar idioma",
   hero: {
     name: "Samuel David Segura Vargas",
-    role: "Desarrollador de software en Fusagasugá",
+    role: "Desarrollador de software en Colombia",
     tagline: "Construyo software que resuelve problemas reales.",
     description:
       "Ingeniero de sistemas en formación con dos años de experiencia profesional. Diseño y desarrollo aplicaciones full stack con Python, Django, React y Google Cloud, con foco en rendimiento, pruebas automatizadas y detalle visual.",
@@ -517,7 +517,7 @@ export const es: Dictionary = {
   cv: {
     title: "CV · Samuel David Segura Vargas",
     description:
-      "Currículum de Samuel David Segura Vargas, desarrollador de software en Fusagasugá.",
+      "Currículum de Samuel David Segura Vargas, desarrollador de software en Colombia.",
     printLabel: "Imprimir o guardar como PDF",
     backLabel: "Volver al portafolio",
     experienceHeading: "Experiencia profesional",

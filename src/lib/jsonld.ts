@@ -37,7 +37,6 @@ export function buildJsonLd(locale: Locale, dict: Dictionary) {
         url: siteConfig.url,
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Fusagasugá",
           addressRegion: "Cundinamarca",
           addressCountry: "CO",
         },

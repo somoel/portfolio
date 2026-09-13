@@ -3,11 +3,11 @@ import { expect, test } from "@playwright/test";
 test("home exposes localized metadata, h1 and hreflang", async ({ page }) => {
   await page.goto("/es");
 
-  await expect(page).toHaveTitle(/Desarrollador de software en Fusagasugá/);
+  await expect(page).toHaveTitle(/Desarrollador de software en Colombia/);
 
   const h1 = page.locator("h1");
   await expect(h1).toContainText("Samuel David Segura Vargas");
-  await expect(h1).toContainText(/desarrollador de software en fusagasugá/i);
+  await expect(h1).toContainText(/desarrollador de software en colombia/i);
 
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
     "href",
@@ -20,9 +20,9 @@ test("home exposes localized metadata, h1 and hreflang", async ({ page }) => {
 
 test("english home is localized", async ({ page }) => {
   await page.goto("/en");
-  await expect(page).toHaveTitle(/Software Developer in Fusagasugá/);
+  await expect(page).toHaveTitle(/Software Developer in Colombia/);
   await expect(page.locator("h1")).toContainText(
-    /software developer in fusagasugá/i,
+    /software developer in colombia/i,
   );
 });
 

@@ -4,7 +4,7 @@ import { getDictionary, isLocale } from "@/content";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt =
-  "Samuel David Segura Vargas, software developer in Fusagasugá";
+  "Samuel David Segura Vargas, software developer in Colombia";
 
 export function generateStaticParams() {
   return [{ lang: "es" }, { lang: "en" }];
