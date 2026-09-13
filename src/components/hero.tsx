@@ -100,14 +100,7 @@ export function Hero({
       <div className="container-page relative">
         <div className="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div>
-            <Reveal>
-              <span className="inline-flex items-center gap-3 rounded-full border border-paper/20 px-4 py-1.5 label-mono text-paper-dim">
-                <span className="h-1.5 w-1.5 rounded-full bg-lime animate-blink" />
-                {dict.hero.eyebrow}
-              </span>
-            </Reveal>
-
-            <h1 className="mt-7">
+            <h1>
               <span className="sr-only">
                 {dict.hero.name}, {dict.hero.role}
               </span>

@@ -31,7 +31,6 @@ export const es: Dictionary = {
   skipToContent: "Saltar al contenido",
   languageSwitchLabel: "Cambiar idioma",
   hero: {
-    eyebrow: "Full stack · Fusagasugá, Colombia",
     name: "Samuel David Segura Vargas",
     role: "Desarrollador de software en Fusagasugá",
     tagline: "Construyo software que resuelve problemas reales.",

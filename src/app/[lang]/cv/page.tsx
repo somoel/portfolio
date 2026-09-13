@@ -57,8 +57,7 @@ export default async function CvPage({ params }: PageProps<"/[lang]/cv">) {
       </div>
 
       <header className="print-break border-b border-paper/15 pb-8">
-        <p className="label-mono text-paper-mute">{dict.hero.eyebrow}</p>
-        <h1 className="mt-4 font-display text-4xl leading-[0.98] tracking-tight sm:text-5xl">
+        <h1 className="font-display text-4xl leading-[0.98] tracking-tight sm:text-5xl">
           {dict.hero.name}
         </h1>
         <p className="mt-2 text-lg text-paper-dim">{dict.hero.role}</p>

@@ -65,7 +65,6 @@ export interface Dictionary {
   skipToContent: string;
   languageSwitchLabel: string;
   hero: {
-    eyebrow: string;
     name: string;
     role: string;
     tagline: string;
