@@ -20,9 +20,10 @@ export function Reveal({
 }) {
   return (
     <motion.div
+      data-motion
       className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ y }}
+      whileInView={{ y: 0 }}
       viewport={{ once, margin: "-70px" }}
       transition={{ duration: 0.7, delay, ease: easing }}
     >
@@ -47,6 +48,7 @@ export function StaggerGroup({
 
   return (
     <motion.div
+      data-motion
       className={className}
       variants={container}
       initial="hidden"
@@ -59,8 +61,8 @@ export function StaggerGroup({
 }
 
 const item: Variants = {
-  hidden: { opacity: 0, y: 22 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: easing } },
+  hidden: { y: 22 },
+  show: { y: 0, transition: { duration: 0.65, ease: easing } },
 };
 
 export function StaggerItem({
@@ -71,7 +73,7 @@ export function StaggerItem({
   className?: string;
 }) {
   return (
-    <motion.div className={className} variants={item}>
+    <motion.div data-motion className={className} variants={item}>
       {children}
     </motion.div>
   );

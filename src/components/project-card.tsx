@@ -33,9 +33,10 @@ export function ProjectCard({
 
   return (
     <motion.article
+      data-motion
       onMouseMove={handleMove}
-      initial={{ opacity: 0, y: 34 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ y: 34 }}
+      whileInView={{ y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
       style={{ "--spot-color": color } as CSSProperties}
@@ -78,7 +79,7 @@ export function ProjectCard({
           {project.tagline}
         </p>
 
-        <p className="mt-4 text-sm leading-relaxed text-paper-dim">
+        <p className="mt-4 max-w-md text-sm leading-relaxed text-paper-dim">
           {project.description}
         </p>
 
@@ -99,7 +100,7 @@ export function ProjectCard({
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-paper px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-ink-950 transition-transform hover:-translate-y-0.5"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full bg-paper px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-ink-950 transition-transform hover:-translate-y-0.5"
             >
               {dict.projects.viewSite}
               <ArrowUpRight size={14} />
@@ -111,7 +112,7 @@ export function ProjectCard({
               href={project.repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-paper/25 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-paper transition-colors hover:border-lime hover:text-lime"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full border border-paper/25 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-paper transition-colors hover:border-lime hover:text-lime"
             >
               {dict.projects.viewCode}
               <ArrowUpRight size={14} />
@@ -119,7 +120,7 @@ export function ProjectCard({
           ) : null}
 
           {!project.repo && !project.demo ? (
-            <span className="inline-flex items-center gap-2 rounded-full border border-paper/15 px-4 py-2.5 text-xs uppercase tracking-[0.16em] text-paper-mute">
+            <span className="inline-flex min-h-11 items-center gap-2 rounded-full border border-paper/15 px-4 py-2.5 text-xs uppercase tracking-[0.16em] text-paper-mute">
               <Lock size={13} />
               {dict.projects.privateNote}
             </span>

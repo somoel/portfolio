@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Check, Copy, Download, Mail } from "lucide-react";
 import type { Dictionary, Locale } from "@/content/types";
 import { siteConfig } from "@/lib/site";
 import { AnimatedHeadline } from "./animated-headline";
 import { GithubIcon, LinkedinIcon } from "./brand-icons";
 import { Reveal } from "./reveal";
+
+type CopyState = "idle" | "copied" | "error";
 
 export function ContactCta({
   dict,
@@ -15,15 +17,23 @@ export function ContactCta({
   dict: Dictionary;
   locale: Locale;
 }) {
-  const [copied, setCopied] = useState(false);
+  const [copyState, setCopyState] = useState<CopyState>("idle");
+  const resetTimer = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (resetTimer.current !== null) window.clearTimeout(resetTimer.current);
+    };
+  }, []);
 
   const copyEmail = async () => {
+    if (resetTimer.current !== null) window.clearTimeout(resetTimer.current);
     try {
       await navigator.clipboard.writeText(siteConfig.email);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 2200);
+      setCopyState("copied");
+      resetTimer.current = window.setTimeout(() => setCopyState("idle"), 2400);
     } catch {
-      setCopied(false);
+      setCopyState("error");
     }
   };
 
@@ -59,7 +69,7 @@ export function ContactCta({
           <Reveal delay={0.2} className="flex flex-col gap-4">
             <a
               href={`mailto:${siteConfig.email}`}
-              className="group flex items-center justify-between gap-4 rounded-2xl bg-lime px-6 py-5 text-ink-950 transition-transform hover:-translate-y-0.5"
+              className="group flex min-h-14 items-center justify-between gap-4 rounded-2xl bg-lime px-6 py-5 text-ink-950 transition-transform hover:-translate-y-0.5"
             >
               <span className="flex items-center gap-3">
                 <Mail size={20} />
@@ -67,7 +77,7 @@ export function ContactCta({
                   <span className="block label-mono opacity-70">
                     {dict.contact.emailLabel}
                   </span>
-                  <span className="block text-sm font-semibold">
+                  <span className="block select-all text-sm font-semibold">
                     {siteConfig.email}
                   </span>
                 </span>
@@ -81,26 +91,47 @@ export function ContactCta({
               <button
                 type="button"
                 onClick={copyEmail}
-                className="inline-flex items-center gap-2 rounded-full border border-paper/25 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-paper transition-colors hover:border-lime hover:text-lime"
+                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-paper/25 px-5 text-xs font-semibold uppercase tracking-[0.16em] text-paper transition-colors hover:border-lime hover:text-lime"
               >
-                {copied ? <Check size={14} /> : <Copy size={14} />}
-                {copied ? dict.contact.copiedEmail : dict.contact.copyEmail}
+                {copyState === "copied" ? <Check size={14} /> : <Copy size={14} />}
+                {copyState === "copied"
+                  ? dict.contact.copiedEmail
+                  : dict.contact.copyEmail}
               </button>
               <a
                 href={`/${locale}/cv`}
-                className="inline-flex items-center gap-2 rounded-full border border-paper/25 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-paper transition-colors hover:border-lime hover:text-lime"
+                title={dict.contact.cvHint}
+                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-paper/25 px-5 text-xs font-semibold uppercase tracking-[0.16em] text-paper transition-colors hover:border-lime hover:text-lime"
               >
                 <Download size={14} />
                 {dict.contact.cvLabel}
               </a>
             </div>
 
+            <p
+              role="status"
+              aria-live="polite"
+              className={`min-h-5 text-xs ${
+                copyState === "error" ? "text-coral" : "text-lime"
+              }`}
+            >
+              {copyState === "copied" ? dict.contact.copiedEmail : null}
+              {copyState === "error" ? (
+                <>
+                  {dict.contact.copyEmailError}{" "}
+                  <span className="select-all font-mono text-paper">
+                    {siteConfig.email}
+                  </span>
+                </>
+              ) : null}
+            </p>
+
             <div className="grid grid-cols-2 gap-3">
               <a
                 href={siteConfig.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-2xl border border-paper/15 px-5 py-4 text-sm text-paper-dim transition-colors hover:border-paper/40 hover:text-paper"
+                className="flex min-h-11 items-center gap-3 rounded-2xl border border-paper/15 px-5 py-4 text-sm text-paper-dim transition-colors hover:border-paper/40 hover:text-paper"
               >
                 <GithubIcon size={18} /> {dict.contact.githubLabel}
               </a>
@@ -108,11 +139,15 @@ export function ContactCta({
                 href={siteConfig.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-2xl border border-paper/15 px-5 py-4 text-sm text-paper-dim transition-colors hover:border-paper/40 hover:text-paper"
+                className="flex min-h-11 items-center gap-3 rounded-2xl border border-paper/15 px-5 py-4 text-sm text-paper-dim transition-colors hover:border-paper/40 hover:text-paper"
               >
                 <LinkedinIcon size={18} /> {dict.contact.linkedinLabel}
               </a>
             </div>
+
+            <p className="text-xs leading-relaxed text-paper-mute">
+              {dict.contact.cvHint}
+            </p>
           </Reveal>
         </div>
       </div>

@@ -238,6 +238,13 @@
   opacity: 1;
 }
 
+/* Motion is an enhancement: without JavaScript, animated content stays visible. */
+html:not(.js) [data-motion] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

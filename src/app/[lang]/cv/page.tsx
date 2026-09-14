@@ -48,7 +48,7 @@ export default async function CvPage({ params }: PageProps<"/[lang]/cv">) {
       <div className="no-print mb-8 flex flex-wrap items-center justify-between gap-4">
         <Link
           href={`/${lang}`}
-          className="inline-flex items-center gap-2 label-mono text-paper-dim transition-colors hover:text-lime"
+          className="inline-flex min-h-11 items-center gap-2 label-mono text-paper-dim transition-colors hover:text-lime"
         >
           <ArrowLeft size={14} />
           {dict.cv.backLabel}
@@ -187,7 +187,7 @@ export default async function CvPage({ params }: PageProps<"/[lang]/cv">) {
       <footer className="no-print mt-12 flex items-center justify-between border-t border-paper/15 pt-6">
         <Link
           href={`/${lang}`}
-          className="label-mono text-paper-dim transition-colors hover:text-lime"
+          className="label-mono inline-flex min-h-11 items-center text-paper-dim transition-colors hover:text-lime"
         >
           {dict.cv.backLabel}
         </Link>

@@ -30,6 +30,7 @@ export function AnimatedHeadline({
           className="inline-block overflow-hidden pb-[0.14em] align-bottom"
         >
           <motion.span
+            data-motion
             className={`inline-block ${wordClassName}`}
             initial={{ y: "115%" }}
             animate={{ y: "0%" }}

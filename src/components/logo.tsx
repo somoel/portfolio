@@ -9,17 +9,19 @@ const sizes = {
 
 export function Logo({
   locale,
+  label,
   size = "md",
   className = "",
 }: {
   locale: Locale;
+  label: string;
   size?: keyof typeof sizes;
   className?: string;
 }) {
   return (
     <Link
       href={`/${locale}`}
-      aria-label="Samuel Segura — inicio"
+      aria-label={label}
       className={`group inline-flex items-center gap-2 ${className}`}
     >
       <span

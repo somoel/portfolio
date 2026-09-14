@@ -1,4 +1,4 @@
-import { GraduationCap, Info } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import type { Dictionary } from "@/content/types";
 import { SectionHeading } from "./section-heading";
 import { Reveal, StaggerGroup, StaggerItem } from "./reveal";

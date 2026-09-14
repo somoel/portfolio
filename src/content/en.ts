@@ -16,7 +16,6 @@ export const en: Dictionary = {
       "React developer Colombia",
       "remote software developer Colombia",
     ],
-    ogAlt: "Samuel David Segura Vargas, software developer in Colombia",
     jobTitle: "Software Developer",
   },
   nav: [
@@ -29,6 +28,12 @@ export const en: Dictionary = {
   ],
   skipToContent: "Skip to content",
   languageSwitchLabel: "Change language",
+  navAria: "Primary",
+  mobileMenuAria: "Mobile menu",
+  menuOpen: "Open menu",
+  menuClose: "Close menu",
+  footerNavAria: "Site links",
+  logoAria: "Samuel Segura — home",
   hero: {
     name: "Samuel David Segura Vargas",
     role: "Software developer in Colombia",
@@ -38,7 +43,7 @@ export const en: Dictionary = {
     status: "Open to remote and hybrid opportunities",
     ctaContact: "Let's talk",
     ctaWork: "View projects",
-    cvLabel: "Download CV",
+    cvLabel: "View CV",
     cvHint: "Print-ready version you can save as PDF.",
     photoAlt: "Portrait of Samuel David Segura Vargas",
     techLabel: "Technologies I work with",
@@ -300,7 +305,10 @@ export const en: Dictionary = {
     intro:
       "I separate what I have used in production from what I know through projects and what I am exploring right now.",
     verifiedNote: "Proven experience",
+    projectsNote: "Used in projects",
     exploringNote: "Active exploration",
+    showAll: "Show all",
+    showLess: "Show less",
     groups: [
       {
         key: "languages",
@@ -502,9 +510,11 @@ export const en: Dictionary = {
     emailLabel: "Email me",
     copyEmail: "Copy email",
     copiedEmail: "Email copied!",
+    copyEmailError: "Couldn't copy automatically. Select the address:",
     linkedinLabel: "LinkedIn",
     githubLabel: "GitHub",
-    cvLabel: "Download CV",
+    cvLabel: "View CV",
+    cvHint: "Print-ready page — use your browser's print option to save it as PDF.",
     footerNote: "Designed and built by Samuel David Segura Vargas with Next.js.",
   },
   cv: {

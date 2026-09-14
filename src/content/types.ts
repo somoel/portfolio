@@ -58,12 +58,17 @@ export interface Dictionary {
     title: string;
     description: string;
     keywords: string[];
-    ogAlt: string;
     jobTitle: string;
   };
   nav: { label: string; href: string }[];
   skipToContent: string;
   languageSwitchLabel: string;
+  navAria: string;
+  mobileMenuAria: string;
+  menuOpen: string;
+  menuClose: string;
+  footerNavAria: string;
+  logoAria: string;
   hero: {
     name: string;
     role: string;
@@ -122,7 +127,10 @@ export interface Dictionary {
     title: string;
     intro: string;
     verifiedNote: string;
+    projectsNote: string;
     exploringNote: string;
+    showAll: string;
+    showLess: string;
     groups: SkillGroup[];
   };
   education: {
@@ -156,9 +164,11 @@ export interface Dictionary {
     emailLabel: string;
     copyEmail: string;
     copiedEmail: string;
+    copyEmailError: string;
     linkedinLabel: string;
     githubLabel: string;
     cvLabel: string;
+    cvHint: string;
     footerNote: string;
   };
   cv: {

@@ -68,7 +68,7 @@ function MonogramPortrait({ dict }: { dict: Dictionary }) {
             className="group flex items-center gap-2 rounded-xl border border-paper/12 bg-ink-850/70 px-3 py-2 transition-colors hover:border-paper/30"
           >
             <span
-              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md font-mono text-[0.62rem] font-semibold text-ink-950"
+              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md font-mono text-[0.6875rem] font-semibold text-ink-950"
               style={{ backgroundColor: tech.color }}
             >
               {tech.label}
@@ -133,14 +133,14 @@ export function Hero({
               <div className="mt-9 flex flex-wrap items-center gap-3">
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="group inline-flex items-center gap-2 rounded-full bg-lime px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-ink-950 transition-transform hover:-translate-y-0.5"
+                  className="group inline-flex min-h-11 items-center gap-2 rounded-full bg-lime px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-ink-950 transition-transform hover:-translate-y-0.5"
                 >
                   <Mail size={16} />
                   {dict.hero.ctaContact}
                 </a>
                 <a
                   href="#proyectos"
-                  className="group inline-flex items-center gap-2 rounded-full border border-paper/25 px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-paper transition-colors hover:border-paper hover:bg-paper hover:text-ink-950"
+                  className="group inline-flex min-h-11 items-center gap-2 rounded-full border border-paper/25 px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-paper transition-colors hover:border-paper hover:bg-paper hover:text-ink-950"
                 >
                   {dict.hero.ctaWork}
                   <ArrowUpRight
@@ -150,9 +150,11 @@ export function Hero({
                 </a>
                 <a
                   href={`/${locale}/cv`}
-                  className="inline-flex items-center gap-2 rounded-full border border-transparent px-4 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-paper-dim underline decoration-paper/30 transition-colors hover:text-lime hover:decoration-lime"
+                  title={dict.hero.cvHint}
+                  className="inline-flex min-h-11 items-center gap-2 rounded-full border border-transparent px-4 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-paper-dim underline decoration-paper/30 transition-colors hover:text-lime hover:decoration-lime"
                 >
                   {dict.hero.cvLabel}
+                  <span className="sr-only"> — {dict.hero.cvHint}</span>
                 </a>
               </div>
             </Reveal>

@@ -209,7 +209,6 @@ export function ProjectArt({
   return (
     <svg
       viewBox="0 0 400 300"
-      role="img"
       aria-hidden="true"
       className="project-art h-full w-full"
       preserveAspectRatio="xMidYMid slice"

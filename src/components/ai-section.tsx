@@ -19,25 +19,27 @@ export function AiSection({ dict }: { dict: Dictionary }) {
         />
 
         <Reveal delay={0.1}>
-          <p className="mt-8 inline-flex items-start gap-3 rounded-2xl border border-dashed border-coral/50 bg-coral/5 px-5 py-4 text-sm text-paper-dim">
+          <p className="mt-8 inline-flex max-w-md items-start gap-3 rounded-2xl border border-dashed border-coral/50 bg-coral/5 px-5 py-4 text-sm text-paper-dim">
             <Sparkles size={16} className="mt-0.5 shrink-0 text-coral" />
             {dict.ai.disclaimer}
           </p>
         </Reveal>
 
-        <StaggerGroup className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <StaggerGroup className="mt-12 grid gap-x-10 md:grid-cols-2">
           {dict.ai.items.map((item, index) => (
-            <StaggerItem key={item.title}>
-              <article className="group h-full rounded-3xl border border-paper/12 bg-ink-850/60 p-7 transition-colors hover:border-magenta/50">
-                <span className="font-mono text-xs text-magenta">
+            <StaggerItem key={item.title} className="h-full">
+              <article className="group flex h-full gap-4 border-t border-paper/10 py-6">
+                <span className="pt-1 font-mono text-xs text-magenta">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-5 text-xl tracking-tight transition-colors group-hover:text-magenta">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-paper-dim">
-                  {item.detail}
-                </p>
+                <div>
+                  <h3 className="text-lg tracking-tight transition-colors group-hover:text-magenta">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 max-w-md text-sm leading-relaxed text-paper-dim">
+                    {item.detail}
+                  </p>
+                </div>
               </article>
             </StaggerItem>
           ))}

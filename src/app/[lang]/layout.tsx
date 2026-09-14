@@ -118,6 +118,11 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-dvh flex flex-col bg-ink-950 text-paper antialiased">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
         <a
           href="#inicio"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-lime focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink-950"

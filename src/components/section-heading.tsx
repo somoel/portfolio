@@ -41,7 +41,7 @@ export function SectionHeading({
       {intro ? (
         <Reveal delay={0.12}>
           <p
-            className={`max-w-2xl text-base leading-relaxed text-paper-dim sm:text-lg ${
+            className={`max-w-xl text-base leading-relaxed text-paper-dim sm:text-lg ${
               align === "center" ? "mx-auto" : ""
             }`}
           >

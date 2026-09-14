@@ -29,11 +29,18 @@ export function LanguageSwitch({
     <Link
       href={target}
       aria-label={label}
-      className="group inline-flex items-center gap-2 rounded-full border border-paper/20 px-3 py-1.5 label-mono text-paper-dim transition-colors hover:border-lime hover:text-lime"
+      className="group inline-flex min-h-11 items-center gap-2 rounded-full border border-paper/20 px-3.5 label-mono text-paper-dim transition-colors hover:border-lime hover:text-lime"
     >
-      <span className="text-paper-mute">{localeShort[locale]}</span>
+      <span
+        aria-current="true"
+        className="font-semibold text-paper underline decoration-lime decoration-2 underline-offset-4"
+      >
+        {localeShort[locale]}
+      </span>
       <span className="text-paper/30">/</span>
-      <span className="group-hover:text-lime">{localeShort[otherLocale]}</span>
+      <span className="text-paper-mute transition-colors group-hover:text-lime">
+        {localeShort[otherLocale]}
+      </span>
     </Link>
   );
 }

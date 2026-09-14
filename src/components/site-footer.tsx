@@ -17,7 +17,7 @@ export function SiteFooter({
     <footer className="relative mt-24 border-t border-paper/10 bg-ink-900">
       <div className="container-page grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <Logo locale={locale} size="lg" />
+          <Logo locale={locale} label={dict.logoAria} size="lg" />
           <p className="mt-4 max-w-xs text-sm text-paper-dim">
             {dict.hero.tagline}
           </p>
@@ -26,7 +26,7 @@ export function SiteFooter({
           </p>
         </div>
 
-        <nav aria-label="Enlaces del sitio" className="flex flex-col gap-3">
+        <nav aria-label={dict.footerNavAria} className="flex flex-col gap-3">
           <span className="label-mono text-paper-mute">
             {dict.projects.label}
           </span>
@@ -34,7 +34,7 @@ export function SiteFooter({
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-paper-dim transition-colors hover:text-lime"
+              className="inline-flex min-h-11 items-center text-sm text-paper-dim transition-colors hover:text-lime"
             >
               {item.label}
             </a>
@@ -47,7 +47,7 @@ export function SiteFooter({
           </span>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="inline-flex items-center gap-2 text-sm text-paper-dim transition-colors hover:text-lime"
+            className="inline-flex min-h-11 items-center gap-2 text-sm text-paper-dim transition-colors hover:text-lime"
           >
             <Mail size={15} /> {siteConfig.email}
           </a>
@@ -55,7 +55,7 @@ export function SiteFooter({
             href={siteConfig.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-paper-dim transition-colors hover:text-lime"
+            className="inline-flex min-h-11 items-center gap-2 text-sm text-paper-dim transition-colors hover:text-lime"
           >
             <GithubIcon size={15} /> GitHub
           </a>
@@ -63,7 +63,7 @@ export function SiteFooter({
             href={siteConfig.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-paper-dim transition-colors hover:text-lime"
+            className="inline-flex min-h-11 items-center gap-2 text-sm text-paper-dim transition-colors hover:text-lime"
           >
             <LinkedinIcon size={15} /> LinkedIn
           </a>

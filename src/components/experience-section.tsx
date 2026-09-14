@@ -87,7 +87,7 @@ export function ExperienceSection({ dict }: { dict: Dictionary }) {
                     <h3 className="text-xl tracking-tight transition-colors group-hover:text-coral">
                       {highlight.title}
                     </h3>
-                    <p className="mt-2 max-w-2xl text-sm leading-relaxed text-paper-dim">
+                    <p className="mt-2 max-w-md text-sm leading-relaxed text-paper-dim">
                       {highlight.detail}
                     </p>
                   </div>
