@@ -5,6 +5,7 @@ import {
   Instrument_Sans,
 } from "next/font/google";
 import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
 import { getDictionary, isLocale } from "@/content";
 import { buildJsonLd } from "@/lib/jsonld";
 import { locales, localizedUrl, siteConfig } from "@/lib/site";
@@ -138,6 +139,7 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Analytics />
       </body>
     </html>
   );
